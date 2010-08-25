@@ -1,0 +1,18 @@
+<span><%= link_to "Sign Out", user_session_path, :method => :delete -%></span>
+
+<div>
+  <h3>===Profile===</h3>
+  <label>Pic: </label><img src="<%= @user.pic %>" /><br />
+  <label>Pic with logo: </label><img src="<%= @user.pic_with_logo %>" /><br />
+  <label>First Name: <%= @user.first_name %></label><br />
+  <label>Last Name: <%= @user.last_name %></label><br />
+  <label>Name: <%= @user.name %></label><br />
+  <label>Birthday: <%= @user.birthday %></label><br />
+  <label>Birthday Date: <%= @user.birthday_date %></label><br />
+  <label>Gender: <%= @user.sex %></label><br />
+  <label>Proxied email: <%= @user.proxied_email %></label><br />
+  <label>Email: <%= @user.email %></label><br />
+  <label>Religion: <%= @user.religion %></label><br />
+  <label>Family: <%= @user.family %></label><br />
+  <label>Current Location: <%= @user.current_location %></label><br />
+</div>
