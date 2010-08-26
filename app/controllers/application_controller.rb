@@ -11,6 +11,6 @@ class ApplicationController < ActionController::Base
 
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
-  #protect_from_forgery  :secret => 'a7cabcdf1499df9ded55d8a3797d9387'
-  #ensure_authenticated_to_facebook
+  protect_from_forgery  :secret => '18e9cdc10e7eea6e47eaba637b37339a'
+  ensure_authenticated_to_facebook
 end
