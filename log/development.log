@@ -412,3 +412,25 @@ Processing HellosController#index (for 127.0.0.1 at 2010-08-26 13:56:58) [GET]
 Redirected to http://www.facebook.com/login.php?api_key=4913c83eb73716a7e6fcb85288ba362b&v=1.0&next=http%3A%2F%2Flocalhost%3A3000%2Fhellos
 Filter chain halted as [:ensure_authenticated_to_facebook] rendered_or_redirected.
 Completed in 1ms (DB: 0) | 302 Found [http://localhost/hellos]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/Daniel/Internship/facebook/ptnd/app/controllers/application_controller.rb:14)
+
+
+Processing HellosController#index (for 127.0.0.1 at 2010-08-26 13:58:31) [GET]
+  Parameters: {"error_msg"=>"next is not owned by the application.", "error_code"=>"100"}
+Redirected to http://www.facebook.com/login.php?api_key=4913c83eb73716a7e6fcb85288ba362b&v=1.0&next=http%3A%2F%2Flocalhost%3A3000%2Fhellos%3Ferror_code%3D100%26error_msg%3Dnext%2Bis%2Bnot%2Bowned%2Bby%2Bthe%2Bapplication.
+Filter chain halted as [:ensure_authenticated_to_facebook] rendered_or_redirected.
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/hellos?error_code=100&error_msg=next+is+not+owned+by+the+application.]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/Daniel/Internship/facebook/ptnd/app/controllers/application_controller.rb:14)
+
+
+Processing InvitationsController#new (for 127.0.0.1 at 2010-08-26 14:02:57) [GET]
+Redirected to http://www.facebook.com/login.php?api_key=4913c83eb73716a7e6fcb85288ba362b&v=1.0&next=http%3A%2F%2Flocalhost%3A3000%2Finvitations%2Fnew
+Filter chain halted as [:ensure_authenticated_to_facebook] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/Daniel/Internship/facebook/ptnd/app/controllers/application_controller.rb:14)
+
+
+Processing InvitationsController#new (for 127.0.0.1 at 2010-08-26 14:03:11) [GET]
+Redirected to http://www.facebook.com/login.php?api_key=4913c83eb73716a7e6fcb85288ba362b&v=1.0&next=http%3A%2F%2Flocalhost%3A3000%2Finvitations%2Fnew
+Filter chain halted as [:ensure_authenticated_to_facebook] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
