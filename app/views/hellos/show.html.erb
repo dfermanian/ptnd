@@ -1,0 +1,12 @@
+<% title "Hello" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @hello.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_hello_path(@hello) %> |
+  <%= link_to "Destroy", @hello, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", hellos_path %>
+</p>

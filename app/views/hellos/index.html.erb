@@ -1,0 +1,18 @@
+<% title "Hellos" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for hello in @hellos %>
+    <tr>
+      <td><%=h hello.name %></td>
+	  <td> <%ENV["hello"]="hello"%><%=ENV["hello"]%></td>
+      <td><%= link_to "Show", hello %></td>
+      <td><%= link_to "Edit", edit_hello_path(hello) %></td>
+      <td><%= link_to "Destroy", hello, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Hello", new_hello_path %></p>
