@@ -7,7 +7,6 @@
   <% for hello in @hellos %>
     <tr>
       <td><%=h hello.name %></td>
-	  <td> <%ENV["hello"]="hello"%><%=ENV["hello"]%></td>
       <td><%= link_to "Show", hello %></td>
       <td><%= link_to "Edit", edit_hello_path(hello) %></td>
       <td><%= link_to "Destroy", hello, :confirm => 'Are you sure?', :method => :delete %></td>
