@@ -382,3 +382,33 @@ NoMethodError (undefined method `ensure_application_is_installed_by_facebook_use
 Rendered rescues/_trace (36.4ms)
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/Daniel/Internship/facebook/ptnd/app/controllers/application_controller.rb:14)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/Daniel/Internship/facebook/ptnd/app/controllers/application_controller.rb:14)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-08-26 13:55:47) [GET]
+
+NameError (undefined local variable or method `ensure_authenticated_to_facebook' for ApplicationController:Class):
+  app/controllers/application_controller.rb:15
+  app/controllers/hellos_controller.rb:1
+  /Users/Daniel/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/Daniel/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/Daniel/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/Daniel/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/Daniel/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/Daniel/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/Daniel/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/Daniel/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/Daniel/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/Daniel/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (89.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/Daniel/Internship/facebook/ptnd/app/controllers/application_controller.rb:14)
+
+
+Processing HellosController#index (for 127.0.0.1 at 2010-08-26 13:56:58) [GET]
+Redirected to http://www.facebook.com/login.php?api_key=4913c83eb73716a7e6fcb85288ba362b&v=1.0&next=http%3A%2F%2Flocalhost%3A3000%2Fhellos
+Filter chain halted as [:ensure_authenticated_to_facebook] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/hellos]
