@@ -3,6 +3,6 @@
 <% fb_multi_friend_request("ParaTiNovia Donations",
 "Invite your friends to use ParaTiNovia Donations.", invitations_path) do %>
 Install ParaTiNovia Donations. 
-<%= fb_req_choice("Install App!", new_invitation_url(:from=>@from_user_id, :canvas=>true))%>
+<%= fb_req_choice("Install App", new_invitation_url(:from=>@from_user_id, :canvas=>true))%>
 <% end %>
 </fb:fbml>

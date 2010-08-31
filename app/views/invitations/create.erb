@@ -1,7 +1,5 @@
-<fb:fbml>
-  <% for id in @sent_to_ids%>
-    <fb:profile-pic uid="<%=id%>" />
-    <fb:name uid="<%=id%>" />
-    <br />
-  <% end %>
+<fb:fbml> 
+	<% for id in @sent_to_ids%>
+		<%= fb_profile_pic id %> <%= fb_name id %><br /> 
+	<% end %>
 </fb:fbml>

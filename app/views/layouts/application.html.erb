@@ -16,7 +16,10 @@
         <h1><%=h yield(:title) %></h1>
       <%- end -%>
       
-      <%= yield %>
+	<fb:fbml> 
+		<%= yield %>
+	</fb:fbml>
+
     </div>
   </body>
 </html>
