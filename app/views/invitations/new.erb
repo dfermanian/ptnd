@@ -4,7 +4,10 @@
 	method="POST" 
 	invite="true" 
 	type="ParaTiNovia Donations" 
-	content="Make and receive gifts. Install app now." >
+	content="Attack your friends. Install Karate Poke now. \ 
+		<%=h "<fb:req-choice 
+		url=\"#{new_invitation_url(:from=>@from_user_id,:canvas=>true)}\"
+		label=\"Attack!\" />"%>"
 	<fb:multi-friend-selector 
 		showborder="false" 
 		actiontext="Invite your friends to use ParaTiNovia Donations." />
