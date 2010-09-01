@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base 
   
   def self.for(facebook_id,facebook_session=nil)
+    debugger
     returning find_or_create_by_facebook_id(facebook_id) do |user|
       unless facebook_session.nil?
         user.store_session(facebook_session.session_key) 

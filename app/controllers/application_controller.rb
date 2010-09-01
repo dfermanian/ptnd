@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_current_user
 
   def set_current_user
-    self.current_user = User.for(facebook_session.user,facebook_session)
+    self.current_user = User.for(facebook_session.user.to_i,facebook_session)
   end
   
 

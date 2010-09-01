@@ -608,3 +608,10 @@ Migrating to CreateAssignments (20100901183950)
   [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `users`[0m
   [4;35;1mSQL (1.1ms)[0m   [0mSHOW KEYS FROM `users`[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/Daniel/Internship/facebook/ptnd/app/controllers/application_controller.rb:17)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mMysql::Error: Column 'facebook_id' cannot be null: INSERT INTO `users` (`facebook_id`, `created_at`, `session_key`, `updated_at`) VALUES(NULL, '2010-09-01 22:33:42', NULL, '2010-09-01 22:33:42')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
