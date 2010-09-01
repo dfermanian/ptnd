@@ -24,6 +24,7 @@ class InvitationsController < ApplicationController
   	@user.profile_main = 
   	render_to_string(:partial=>"profile",
   	  :locals=>{:from=>params[:from]})	  
+  	  Assignment.send_assignment_deadline
   end
   
   

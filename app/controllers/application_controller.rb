@@ -8,6 +8,12 @@
 #---
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
+  attr_accessor :current_user
+  before_filter :set_current_user
+  helper_attr :current_user
+  def set_current_user 
+    self.current_user = User.for(facebook_session.user.to_i)
+  end
 
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
