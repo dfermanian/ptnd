@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base 
+  
   def self.for(facebook_id,facebook_session=nil)
     returning find_or_create_by_facebook_id(facebook_id) do |user|
       unless facebook_session.nil?
@@ -18,7 +19,7 @@ class User < ActiveRecord::Base
   def facebook_session
     @facebook_session ||= 
       returning Facebooker::Session.create do |session|
-        session.secure_with!(session_key,facebook_id,1.hour.from_now)
+        session.secure_with!(session_key, facebook_id, 1.hour.from_now)
       end
   end
   
