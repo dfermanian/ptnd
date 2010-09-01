@@ -513,3 +513,36 @@ Migrating to CreateAssignments (20100901183950)
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("hellos")[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("user_mailers")[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (36.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (126.3ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (117.9ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateHellos (20100826204127)
+  [4;36;1mSQL (82.0ms)[0m   [0;1mCREATE TABLE `hellos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826204127')[0m
+Migrating to CreateUserMailers (20100831213742)
+  [4;36;1mSQL (86.1ms)[0m   [0;1mCREATE TABLE `user_mailers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100831213742')[0m
+Migrating to CreateUsers (20100831224951)
+  [4;36;1mSQL (96.8ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `facebook_id` integer NOT NULL, `session_key` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100831224951')[0m
+Migrating to CreateAssignments (20100901183950)
+  [4;36;1mSQL (97.7ms)[0m   [0;1mCREATE TABLE `assignments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100901183950')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `assignments`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `assignments`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `assignments`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `hellos`[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mdescribe `hellos`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `hellos`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `user_mailers`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `user_mailers`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `user_mailers`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
