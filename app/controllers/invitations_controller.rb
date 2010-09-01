@@ -21,7 +21,9 @@ class InvitationsController < ApplicationController
   
   def update_profile
   	@user = facebook_session.user
-    UserMailer.deliver_profile(facebook_session.user)
+  	@user.profile_main = 
+  	render_to_string(:partial=>"profile",
+  	  :locals=>{:from=>params[:from]})	  
   end
   
   

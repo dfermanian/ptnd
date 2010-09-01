@@ -1,4 +1,5 @@
 class UserMailer < Facebooker::Rails::Publisher
+  
   def profile(user)
       send_as :profile
       from user
@@ -7,4 +8,5 @@ class UserMailer < Facebooker::Rails::Publisher
       profile(fbml)
       profile_main(fbml)
     end
+    
 end

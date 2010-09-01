@@ -9,10 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100826204127) do
+ActiveRecord::Schema.define(:version => 20100831224951) do
 
   create_table "hellos", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_mailers", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.integer  "facebook_id", :limit => 20, :null => false
+    t.string   "session_key"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
